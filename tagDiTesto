@@ -1,4 +1,5 @@
 <!DOCTYPE html> <!--Specifica il tipo di documento: HTML-->
+
 <head>
 <title> <!--Titolo della pagina, con cui viene cercato sui motori di ricerca su internet-->
 Titolo della pagina
@@ -60,13 +61,11 @@ Titolo della pagina
 </p>
 <!--blocco per scrivere del codice   <code></code>  font Courrier new -->
 <code>HTML language </code>
-</body>
 <center> testo centrato con center in disuso</center> <!--tag-->
 <!--attributo align  che sostituisce center -->
 <p align="center ">testo centrato <br> con attibuto di align</p>
 <p align="left">testo allineato a <br> sx con attibuto di align</p>
 <p align="right">testo allineato a <br> dx con attibuto di align</p>
-</html>
 
 <blockquote><mark> tag blockquote paragrafo con rientro sulla prima riga </mark><br>
     La sua vita è ricordata attraverso</br> numerosi aneddoti, talvolta di origine incerta, </br>
@@ -78,4 +77,10 @@ Titolo della pagina
     <address> Fulvio Montorio <br> via Calzella Carfagni, 54<br> 83048 Montella (Av) </address>
     <hr>
     <mark><marquee behavior="" direction="">Testo a scorrimento</marquee></mark>
+
+
+
+</body>
+
+</html>
 
