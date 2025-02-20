@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!--Specifica il tipo di documento: HTML-->
+<head>
+<title> <!--Titolo della pagina, con cui viene cercato sui motori di ricerca su internet-->
+Titolo della pagina
+</title>
+
+<!--commento-->
+
+</head>
+
+<body>
+<!--Ogni Tag possiede delle proprietà intrinseche che è èpossibile modificare mediamnte attributi-->
+<u><h1> <mark> Titolo grande 1 con proprietà grassetto</mark> </h1></u>
+<span style="color:green"><h2> sottotitolo  2 con proprietà grassetto </h2> </span>  
+<span style="color:rgb(26, 157, 180)"><h3> sottotitolo 3 con proprietà grassetto</h3> </span> 
+<span style="color:rgb(209, 36, 157)"><h4> sottotitolo 4 con proprietà grassetto</h4> </span>   
+<span style="color:red"><h5> sottotitolo 5 con proprietà grassetto</h5> </span> 
+<span style="color:rgb(72, 8, 192)"><h6> sottotitolo 6 con proprietà grassetto</h1> </span>
+<!--Altri tag legati al testo:
+<p> testo </p>  paragrafo, font Times new Roman -->
+<p> 
+    <span style="color:rgb(3, 2, 15)"> testo normale  
+        </span>
+ </p>
+
+
+<!--tag </br> ritorno a capo stesso paragrafo-->
+<p>Considerato come uno dei più grandi scienziati e matematici della storia, </br> 
+    contribuì ad avanzare la conoscenza in settori che spaziano dalla geometria</br>
+     all'idrostatica, dall'ottica alla meccanica: fu in grado di calcolare la superficie</br>
+     e il volume della sfera e formulò
+    </p>
+
+<p> 
+    <!--
+    tag
+    <strong> grassetto </strong>
+    <i>      corsivo </i> 
+    <u>      sottolineato </u>
+    <mark>   evidenziato </mark>
+    <sup>    apice   </sup>
+    <sub>    pedice  </sub>
+    <b>      grassetto </b>  in disuso 
+    sono tag ereditari, disciplinano un tag al loro interno
+    <hr>  linea dritta
+    blocchi 
+    <blockquote>  paragrafo con rientro all prima riga 
+    <address> si utilizza per scrivere un indirizzo di posta, ha la proprietà intrinseca del corsivo
+    <marquee> testo a scorrimento da dx->sx
+    
+          -->
+     le leggi che <b>regolano </b> il galleggiamento dei corpi; </br> 
+     in campo <strong>ingegneristico</strong> , scoprì e sfruttò i principi di funzionamento </br>
+     delle leve e il suo stesso nome è associato a numerose macchine e dispositivi, </br>
+     come la vite di Archimede, a <strong><i><u><mark>dimostrazione della sua <br> capacità inventiva </mark> </u></i></strong>;</br>
+     circondate ancora da un alone di mistero sono invece le macchine da guerra che Archimede </br>
+     avrebbe preparato per difendere Siracusa dall'assedio romano.</br>
+     apice<sup>apice<sup>apice</sub></sup> </br>
+     Pedice<sub> pedice <sup>apice</sup></sub>
+</p>
+<!--blocco per scrivere del codice   <code></code>  font Courrier new -->
+<code>HTML language </code>
+</body>
+<center> testo centrato con center in disuso</center> <!--tag-->
+<!--attributo align  che sostituisce center -->
+<p align="center ">testo centrato <br> con attibuto di align</p>
+<p align="left">testo allineato a <br> sx con attibuto di align</p>
+<p align="right">testo allineato a <br> dx con attibuto di align</p>
+</html>
+
+<blockquote><mark> tag blockquote paragrafo con rientro sulla prima riga </mark><br>
+    La sua vita è ricordata attraverso</br> numerosi aneddoti, talvolta di origine incerta, </br>
+    che hanno contribuito a costruire la figura dello scienziato nell'immaginario collettivo.</br>
+    È rimasta celebre nei secoli, ad esempio, l'esclamazione èureka! (εὕρηκα! - ho trovato!)</br>
+    a lui attribuita dopo la scoperta del principio sul galleggiamento dei corpi </br>
+    che ancora oggi porta il suo nome.</blockquote>
+
+    <address> Fulvio Montorio <br> via Calzella Carfagni, 54<br> 83048 Montella (Av) </address>
+    <hr>
+    <mark><marquee behavior="" direction="">Testo a scorrimento</marquee></mark>
+
