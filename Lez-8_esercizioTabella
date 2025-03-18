@@ -11,13 +11,13 @@
       <thead ></thead> 
       <tbody>
          <tr bgcolor="lightgrey">
-			<th align="center" width="50">Anno</th>
-			<th align="center" width="50">Rarità</th>
-			<th align="left" width="100">Circolanti</th>
-			<th align="left" width="100">Divisionali FDC</th>
-			<th align="left" width="100">Divisionali FDC</th>
-			<th align="left" width="100">Tiratura totale</th>
-		</tr> 
+		<th align="center" width="50">Anno</th>
+		<th align="center" width="50">Rarità</th>
+		<th align="left" width="100">Circolanti</th>
+		<th align="left" width="100">Divisionali FDC</th>
+		<th align="left" width="100">Divisionali FDC</th>
+		<th align="left" width="100">Tiratura totale</th>
+	</tr> 
          <tr><td align="center">1955</td><td align="center">CC</td><td align="right">8.000.000</td><td  align="right"></td><td  align="right"></td><td  align="right"><strong>8.600.000</strong></td></tr> 
 		 <tr><td align="center">1956</td><td align="center">CC</td><td align="right">99.800.000</td><td  align="right"></td><td  align="right"></td><td  align="right"><strong>99.800.000</strong></td></tr> 
 		 <tr><td align="center">1957</td><td align="center">CC</td><td align="right">90.600.000</td><td  align="right"></td><td  align="right"></td><td  align="right"><strong>90.600.000</strong></td></tr> 
