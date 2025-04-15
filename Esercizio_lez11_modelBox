@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<Head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <title>Lez-11_esercizioBoxModel</title>
+<style>
+
+   * {                                  /*riduce margine al body*/
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+}
+
+    .box1{
+        padding-top: 580px;
+        padding-left: 30px ;
+        background-image: url(https://images.pexels.com/photos/31528483/pexels-photo-31528483.jpeg);
+        background-size:cover;
+    }
+
+    .p1{background-color: rgba(0,0,0,0.3);
+        font-size: 70px;
+        font-weight: bold;
+        color:white;
+        width:max-content;
+        font-family: 'Arial Narrow';
+       margin-top: 2px;
+    }  
+
+    .box3{
+        background-color: rgb(0,0,0);
+        font-size: 30px;
+        color:white;
+        text-align: justify;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-style: ;
+    }
+</style>
+</Head>
+<body> 
+    <div class="box1" >
+            <p class="p1">Sampieri</p>
+            <p class="p1">Scicli (RG)</p>
+            <br>
+    </div>
+  
+    <div class="box3">Nota località balneare, antico ed affascinante borgo di pescatori, dal minuscolo e romantico centro storico di case in pietra e stradine lastricate, è situata lungo uno sperone di roccia calcarea compreso tra due spiagge di finissima sabbia dorata: la maggiore si estende per circa 1800 m ad est dell'abitato e la minore, di 400 m circa, è situata ad ovest. L'economia del borgo è oggigiorno prevalentemente legata alle attività agricole ed al turismo, disponendo di una struttura ricettiva alberghiera di prim'ordine e di un moderno camping ben attrezzato e funzionale.
+    </div>
+           
+</body>
+
+</body>
+</html>
