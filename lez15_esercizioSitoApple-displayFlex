@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+    margin: 0px;
+    box-sizing: border-box;
+    min-width: 1250px;
+    padding: 7px;
+ } 
+
+.flex-box1{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    column-gap: 14px;  
+ }
+.flex-box2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    column-gap: 14px;
+}
+
+.box {
+  position: relative;
+  flex:1;
+  text-align: center;
+  padding-block: 7px;
+   
+}
+img {
+    width: 100%;
+    height: 580px;
+}
+
+.oggetto1{
+    width: 100%;
+    position: absolute; 
+    top:65%;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: black;
+}
+
+.oggetto2{
+    width: 100%;
+    position: absolute;
+    top:5%;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: black;
+}
+.oggetto2-2{
+    width: 100%;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+    font-size: 10pt;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: black;
+ }  
+ 
+.oggetto3{
+    width: 100%;
+    position: absolute;
+    top:55%;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: white
+}
+ 
+.oggetto4{
+    width: 100%;
+    position: absolute;
+    top:1%;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: black
+ 
+}
+.pulsBlu {
+    width: 110px;
+    height: 40px;
+    background-color: #007BFF;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    cursor: pointer;
+}
+.pulsAcq {
+    width: 90px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid  #007BFF;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color:  #007BFF;
+    
+}
+
+.pulsAcq:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.pulsBlu:hover {
+  background-color: #1e85f3;
+}
+
+.titolo{
+    width: 100%;
+    padding-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    font-weight: 600;
+    color:  black;
+}
+
+.titolo_bianco{
+    width: 100%;
+    padding-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    font-weight: 600;
+    color: white;
+}
+@media (max-width: 1216px) {
+        .box{
+         width: 100%;
+         flex:none;
+    }
+   /*img{
+    height: 490px;
+   }*/
+    .titolo{
+        font-size: 28pt;
+    }
+     p{
+        font-size: 18pt;
+    }
+   
+}
+
+</style>
+</head>
+<body>
+<div class="flex-box1">
+    <div class="box">
+        <a href="https://developer.apple.com/wwdc25/" target="_new">
+            <img src="https://www.apple.com/v/home/ce/images/promos/wwdc25-announce/promo_wwdc25__e4ew4e8nmaaa_large.jpg">
+        </a>
+        <div class="oggetto1">
+            <p>Apple Wordwide Developers Conference.<br> Partecipa online dal 9 al 13 giugno.</p>
+            <button class="pulsBlu"> Scopri di più</button>
+        </div>
+    </div>
+
+    <div class="box">  
+        <a href="https://www.apple.com/it/macbook-air/" target="_new">
+            <img src="https://www.apple.com/euro/home/ab/screens_alt/images/promos/ipad-air/alt1/promo_ipad_air__bfbxzvw65c02_large.jpg">
+        </a>
+        <div class="oggetto2"> 
+            <div class="titolo">MacBook Air</div>
+            <p> Colore celeste. E prestazioni celestiali,<br> con M4.</p>
+            <button class="pulsBlu">Scopri di più</button>
+            <a href="https://www.apple.com/it/shop/goto/buy_mac/macbook_air" target="_new"><button class="pulsAcq">Acquista</button></a>
+        </div>
+        <div class="oggetto2-2">
+            <div>Progetto per Apple Intelligence</div> 
+            <div>Apple Intelligence è ora disponibile<sup>1</sup></div>
+        </div>
+    </div>
+</div>
+
+<div class="flex-box2">
+    <div class="box">
+        <a href="https://www.apple.com/it/airpods-4/" target="_new" >
+            <img src="https://www.apple.com/v/home/ce/images/promos/airpods-4/promo_airpods_4_avail__bl22kvpg6ez6_large.jpg">
+        </a>
+        <div class="oggetto3">
+            <div class="titolo_bianco">AirPods 4</div>
+            <p > Super. Sonici. <br>Anche con cancellazione<br>attiva del rumore.<sup>3</sup> </p>
+            <button class="pulsBlu">Scopri di più</button>
+            <a href="https://www.apple.com/it/shop/goto/buy_airpods/airpods_4" target="_new"><button class="pulsAcq">Acquista</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <a href="https://www.apple.com/it/education/college-students/" target="_new"> 
+           <img src="https://www.apple.com/euro/home/aa/screens_alt/images/promos/college-students/promo_college_students__bxqdcoxgjzw2_large.jpg" >
+        </a>
+        <div class="oggetto4">
+            <div class="titolo">Per chi è all'università</div>
+            <p> Mac e IPad.<br>I primi della classe<br>in ogni materia</p>
+            <button class="pulsBlu">Scopri di più</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
