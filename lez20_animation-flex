@@ -1,0 +1,401 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <style>
+ body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ } 
+
+.riga{
+
+    display: grid;
+    grid-template-columns: 70% auto;
+    gap:10px;
+    border-right:1 solid rgb(221, 213, 97);  
+}
+.navig{
+    columns:1 /span 2;
+}
+.box1{
+    display: flex;
+    width: 100%; /*height: 700px;*/
+    border:1 solid rgb(221, 213, 97);  
+}
+.menu{margin-top: 0px}
+
+
+
+.puls-cuore{
+    margin-top: 75px; margin-left: 75px;
+    width: 612px; height: 612px;
+     background-image: url(https://media.istockphoto.com/id/1202005820/it/foto/cuore-di-frutta-e-verdura-verdure-e-frutta-fresche-frutta-e-verdura-colorata-mangiare-pulito.jpg?s=612x612&w=0&k=20&c=w9IX5lok-Ev3PP5PgBtjU-iuiALwQcScfQ2G78hNQ0Y=);   
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation-name: puls;
+    animation-duration:1.5s;
+    animation-fill-mode: forwards;  
+    animation-iteration-count: 6;
+    transition-timing-function: ease;
+}
+
+@keyframes puls{
+    0%{
+         width: 612px; height: 612px;
+    }
+    100%{ 
+         width: 680px; height:680px;
+    }
+}
+
+.menu1{
+    display: flex;
+    width: 200px; height: 100px;
+    top: 0px; left: 0px;
+    animation-name: rot1;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+    justify-content:center;
+    align-items:end;
+    background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2023/05/homemade-pasta.jpg);
+     background-size: cover;
+}
+
+.t1{
+    font-size: 20pt; font-weight: 500;
+    animation-name: textrotate1;
+    animation-duration:3s; 
+    color:rgb(241, 232, 176);
+}
+
+@keyframes rot1{
+     0%{ 
+        margin-left: 0%; margin-top: 0%; 
+        width: 50px; height: 50px; border-radius: 25px;       
+    }
+    50%{
+        margin-left: 60%; margin-top: 35%;
+        width: 150px; height: 75px; border-radius: 37.5px;
+    }
+    100%{ 
+        margin-left: 10%; margin-top: 200px; /*distanza finale top*/
+        width:200px; height: 100px; border-radius: 75px;
+        transform: rotate(360deg); 
+    } 
+}
+@keyframes textrotate1{
+     0%{
+        font-size: 0pt;
+    }
+    50%{
+        transform: rotate(-360deg);
+        font-size: 10pt;
+     }
+     100%{
+        transform: rotate(-720deg);
+        font-size: 20pt;
+     }
+}
+
+.menu2{
+    display: flex;
+    animation-name: rot2;
+    animation-duration:3.5s;
+    animation-fill-mode: forwards;
+    justify-content:center;
+    align-items:end;
+    background-image: url(https://media.istockphoto.com/id/2213943398/it/foto/piatti-di-insalata-freschi-e-sani-girati-dallalto-sul-tavolo-scuro.jpg?s=612x612&w=0&k=20&c=EDmXFDNI129CJ5kqmAojMaLi-bTSqJCKpsu1Ii46Kx0=);
+    background-size: cover;
+}
+
+.t2{
+    font-size: 20pt; font-weight: 500;
+    animation-name: textrotate2;  
+    animation-duration:3.5s; 
+    color:rgb(241, 232, 176);
+}
+@keyframes rot2{
+    0%{ 
+        margin-left: 0%; margin-top: 0%; 
+        width: 50px; height: 50px; border-radius: 25px;       
+    }
+    50%{
+        margin-left: 60%; margin-top: 100px;
+        width: 150px; height: 75px; border-radius: 37.5px;
+    }
+    100%{ 
+        margin-left: 10%; margin-top: 10px; /*distanza finale top*/
+        width:200px; height: 100px; border-radius: 75px;
+        transform: rotate(360deg); 
+    } 
+ }
+
+@keyframes textrotate2{
+    0%{
+        font-size: 0pt;
+    }
+    50%{
+        transform: rotate(-360deg);
+        font-size: 10pt;
+     }
+     100%{
+        transform: rotate(-720deg);
+        font-size: 20pt;
+     }
+}
+
+.menu3 {
+    display: flex;
+    top: 0px; left: 0px;
+    animation-name: rot3;
+    animation-duration:4s;
+    animation-fill-mode: forwards;
+    justify-content:center;
+    align-items:end;
+    background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2023/08/pizza-basil-leaf-detail.jpg);
+    background-size: cover;
+}
+
+.t3{
+    font-size: 20pt; font-weight: 500;
+    animation-name: textrotate3;
+    animation-duration:4s; 
+    color:rgb(241, 232, 176);
+}
+
+@keyframes rot3{
+    0%{ 
+        margin-left: 0%; margin-top: 0%; 
+        width: 50px; height: 50px; border-radius: 25px;       
+    }
+    50%{
+        margin-left: 60%; margin-top: 35%;
+        width: 150px; height: 75px; border-radius: 37.5px;
+    }
+    100%{ 
+        margin-left: 10%; margin-top: 10px; /*distanza finale top*/
+        width:200px; height: 100px; border-radius: 75px;
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes textrotate3{
+    0%{
+        font-size: 0pt;
+    }
+    50%{
+        transform: rotate(-360deg);
+        font-size: 10pt;
+     }
+     100%{
+        transform: rotate(-720deg);
+        font-size: 20pt;
+     }
+}
+ .menu4 {
+    display: flex;
+    animation-name: rot4;
+    animation-duration:4.5s;
+    animation-fill-mode: forwards;
+    justify-content:center;
+    align-items:end;
+    background-image: url(https://www.foodiesfeed.com/wp-content/uploads/ff-images/2025/06/pistachio-cake-slice-with-creamy-filling.webp);
+    background-size: cover;
+}
+
+.t4{
+    font-size: 20pt; font-weight: 500;
+    animation-name: textrotate4;
+    animation-duration:4.5s; 
+    color:rgb(241, 232, 176);
+}
+
+@keyframes rot4{
+     0%{ 
+        margin-left: 0%; margin-top: 0%; 
+        width: 50px; height: 50px; border-radius: 25px;       
+    }
+    50%{
+        margin-left: 60%; margin-top: 35%;
+        width: 150px; height: 75px; border-radius: 37.5px;
+    }
+    100%{ 
+        margin-left: 10%; margin-top: 10px; /*distanza finale top*/
+        width:200px; height: 100px; border-radius: 75px;
+        transform: rotate(360deg); 
+    } 
+}
+
+
+@keyframes textrotate4{
+    0%{
+        font-size: 0pt;
+    }
+    50%{
+        transform: rotate(-360deg);
+        font-size: 10pt;
+     }
+     100%{
+        transform: rotate(-720deg);
+        font-size: 20pt;
+     }
+}
+ 
+.menu5 {
+    display: flex;
+    animation-name: rot5;
+    animation-duration:5s;
+    animation-fill-mode: forwards;
+    justify-content:center;
+    align-items:end;
+    background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2023/10/pouring-wine.jpg);
+    background-size: cover;
+   }
+
+.t5{
+    font-size: 20pt; font-weight: 500;
+    animation-name: textrotate5;
+    animation-duration:5s; 
+    color:rgb(241, 232, 176);
+}
+
+@keyframes rot5{
+    0%{ 
+        margin-left: 0%; margin-top: 0%; 
+        width: 50px; height: 50px; border-radius: 25px;       
+    }
+    50%{
+        margin-left: 60%; margin-top: 35%;
+        width: 150px; height: 75px; border-radius: 37.5px;
+    }
+    100%{ 
+        margin-left: 10%; margin-top: 10px; /*distanza finale top*/
+        width:200px; height: 100px; border-radius: 75px;
+        transform: rotate(360deg); 
+    } 
+}
+@keyframes textrotate5{
+    0%{
+        font-size: 0pt;
+    }
+    50%{
+        transform: rotate(-360deg);
+        font-size: 10pt;
+     }
+     100%{
+        transform: rotate(-720deg);
+        font-size: 20pt;
+     }
+}
+/* dalla posizione 1 / span 2 spazio di due colonne*/
+    </style>
+</head>
+<body>
+    <div class="riga">
+<div class="navig">
+    <nav class="navbar navbar-expand-lg fixed-top bg-trasperent" style="border-bottom:1px solid;color: rgb(202, 174, 11);"> <!--style="border-bottom:1px solid;color: white;""-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.etsystatic.com/11703740/r/il/691d32/992236355/il_570xN.992236355_fn86.jpg" alt="Logo" width="60px" height="60px" class="d-inline-block align-text-top"><!--align-text-top-->
+            
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:green;">
+                <span class="navbar-toggler-icon" style="color:green;"></span> <!--style="color:green;"-->
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:green;"> <!--style="color:green;"-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown" style="color:green;">
+                        <a class="nav-link dropdown-toggle" href="#" id="ristorantiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:rgb(202, 174, 11);"><!--id="ristorantiDropdown"  style="color:green;"-->
+                        Ristoranti
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="ristorantiDropdown"><!--aria-labelledby="ristorantiDropdown"-->
+                            <li><a class="dropdown-item" href="#">Roma</a></li>
+                            <li><a class="dropdown-item" href="#">Milano</a></li>
+                            <li><a class="dropdown-item" href="#">Napoli</a></li>
+                            <li><a class="dropdown-item" href="#">New-York</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Altro...</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:rgb(202, 174, 11);"> <!--style="color:green;"-->
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown"> <!--aria-labelledby="menuDropdown"-->
+                            <li><a class="dropdown-item" href="#">Primi</a></li>
+                            <li><a class="dropdown-item" href="#">Contorni</a></li>
+                            <li><a class="dropdown-item" href="#">Pizze</a></li>
+                            <li><a class="dropdown-item" href="#">Hamburgers</a></li>
+                            <li><a class="dropdown-item" href="#">Vini</a></li>
+                            <li><a class="dropdown-item" href="#">Dolci</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Altro...</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" style="color:green;">
+                        <a class="nav-link" href="#" style="color:green;">
+                            <button type="button" class="btn btn-warning">Prenota</button>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    </div>
+    <div class="riga">
+        <div class="box1">
+           
+            <div class="puls-cuore" ></div>
+        </div>        
+        <div class="menu">
+                <div class="menu1"><div class="t1">Primi</div>
+                </div>
+                <div class="menu2"><div class="t2">Contorni</div>
+                </div>
+                <div class="menu3"><div class="t2">Pizze</div> 
+                </div>
+                <div class="menu4"><div class="t4">Dolce</div>
+                </div>
+                <div class="menu5"><div class="t5">Vini</div>
+                </div>
+        </div>
+    </div>
+
+
+           <!-- Popper e Bootstrap JS v5.3.2 -->
+<script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous">
+</script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous">
+</script>
+</body>
+</html>
