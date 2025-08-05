@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcolo perimetro ed area figure multiple</title>
+</head>
+<body>
+    <h1>Calcolo perimetro e area del <span id="figura"></span></h1> 
+    <p> <span id="dim1"></span> </p>
+    <p> <span id="altezza"></span> </p>
+    <p><span id="perimetro"></span> </p>
+    <p><span id="area"></span> </p>
+    <p><span id="msg"></span> </p>
+   
+ <script>
+    var scelta, lato1, lato2,  area, perimetro, altezza, base;
+    scelta =parseInt(prompt("1=rettangolo, 2=cerchio, 3=triangolo")) ;
+
+    /* scelta rettangolo*/
+    if(scelta==1){ 
+         lato1 = parseFloat(prompt("Inserisci lato1:"));
+         lato2 = parseFloat(prompt("Inserisci lato2:"));
+
+         function perimetro_ret(){
+            perimetro=2*(lato1+lato2)
+         return perimetro;
+         }
+
+         function area_ret(){
+            area=lato1*lato2;
+            return area;
+         } 
+        document.getElementById("figura").innerHTML = "<strong>Rettangolo: </strong>";
+        document.getElementById("dim1").innerHTML = "<strong>Lato 1:  </strong>"+ lato1 +" cm; " + "<strong>Lato 2:  </strong>"+lato2 +" cm;";
+        document.getElementById("perimetro").innerHTML = "<strong>Perimetro: </strong>"  +perimetro_ret() +" cm;";
+        document.getElementById("area").innerHTML = "<strong>Area: </strong>" + area_ret() +" cm<sup>2.";
+    }
+    
+     /*scelta cerchio*/
+    else if (scelta==2) { 
+        var raggio;
+        p=3.14159;
+        raggio = parseFloat(prompt("Inserisci raggio:"));
+
+        function perimetro_cerc(){
+            perimetro=raggio*2*p;
+        return perimetro;
+         }
+
+         function area_cerc(){
+            area=raggio*raggio*p;
+        return area;
+         } 
+            document.getElementById("figura").innerHTML = "<strong>Cerchio: </strong>";
+            document.getElementById("dim1").innerHTML = "<strong>Raggio: </strong>"+ raggio +" cm;";
+            document.getElementById("perimetro").innerHTML = "<strong>Perimetro: </strong>" +perimetro_cerc() +" cm;";
+            document.getElementById("area").innerHTML = "<strong>Area: </strong>" + area_cerc() +" cm<sup>2.";
+    }
+ 
+    /*scelta triangolo*/
+    else if(scelta==3){ 
+        var tipoTria;
+        base = parseFloat(prompt("Inserisci base:"));
+        lato1 = parseFloat(prompt("Inserisci lato 1:"));
+        lato2 = parseFloat(prompt("Inserisci lato 2:"));
+      
+        /* riconoscimento triangolo*/
+              
+            if((lato1==lato2) && (lato1==base) ){
+                tipoTria="equilatero"; 
+                altezza=(lato1*Math.sqrt(3))/2;  /*calcolo aletezza del triangolo*/
+            }
+            else if((lato1==lato2) || (lato1==base)|| (lato2==base) ) {
+                tipoTria="isoscele";
+                altezza=(Math.sqrt(pow(lato1,2) - Math.pow((b1),2)));
+            }
+            else {
+                tipoTria="scaleno";
+                altezza=parseFloat(prompt("Inserisci altezza:"));
+            }
+
+        /*metodo calcolo area del triangolo*/
+        function area_tri() 
+        {
+            area=(altezza*base)/2;
+            return area;
+        }
+         /*metodo calcolo perimetro del triangolo*/
+        function perimetro_tri(){
+            perimetro=(lato1+lato2+base);
+            return perimetro;
+        }
+        document.getElementById("figura").innerHTML = "triangolo " +tipoTria +": ";
+        document.getElementById("dim1").innerHTML = "<strong>Lato 1:  </strong>"+ lato1 +" cm; " +"<strong>Lato 2:  </strong>"+ lato2 +" cm; " + "<strong>Base:  </strong>"+ base +" cm;";
+        document.getElementById("altezza").innerHTML = "<strong>Altezza:  </strong>"+ altezza +" cm;";
+        document.getElementById("perimetro").innerHTML = "<strong>Perimetro:  </strong>" + perimetro_tri() +" cm;";
+        document.getElementById("area").innerHTML = "<strong>Area:  </strong>" + area_tri() +" cm<sup>2.";
+    }
+      /*scelata non valida*/  
+    else {
+        document.getElementById("msg").innerHTML = "Scelta figura non valida.";
+    }
+
+ </script>
+     
+</body>
+</html>
