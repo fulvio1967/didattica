@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+<body>
+    <h2>Calcolo sconto e IVA</h2>
+     <button onclick="insPrezzo()">ins. prezzo</button>
+    <p id="conIVA"></p>
+
+    <button onclick="insSconto()">applica sconto</button>
+    <p id="sconto"></p>
+    <p id="scontato"></p>
+
+    <button onclick="togliIVA()">scorpora IVA</button>
+    <p id="IVA"></p>
+    <p id="senzaIVA"></p>
+   
+<script> 
+    
+    function insPrezzo(){
+        a=prompt("Inserisci prezzo:", "");
+        conIVA.innerHTML= 'prezzo con IVA: '+ a + ' €';
+     }
+	function insSconto(){
+       b=prompt("Inserisci % sconto:", "");
+       sconto.innerHTML= 'sconto: '+ b +'% = ' + (a*b/100).toFixed(1) + ' €'; 
+        a=a-(a*b/100);
+       scontato.innerHTML= 'prezzo scontato: '+ a.toFixed(1)+ ' €'; 
+    }
+        function togliIVA(){
+        b=a;
+        a /=1.22;
+        senzaIVA.innerHTML= 'prezzo senza IVA: '+ a.toFixed(1)+ ' €';
+        b =b-a;  
+        IVA.innerHTML= 'IVA: '+ b.toFixed(1)+ ' €';
+    }
+   
+</script>
+</body>
+</html>
