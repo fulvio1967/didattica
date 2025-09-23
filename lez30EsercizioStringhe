@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="iy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lez30 esercizio moduli-text</title>
+    <style>
+        .t {
+            color: black;
+            font-size: 12pt;
+            font-weight: 800;
+        }
+        p{
+            font-size: 12pt;
+            color: rgb(6, 39, 185);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h2>Gestione stringhe</h2>
+    <button onclick="inserisciStringa()">Inserisci stringa</button>
+    <button onclick="aggiungiTesto()">Aggiungi testo</button>
+    <p id="nTesto"></p>  
+    <p id="stampaStringa"></p>
+
+     <button onclick="lunghezzaStringa()">Lunghezza stringa</button>
+     <p id="lStringa"></p>
+
+    <button onclick="inserisciParola(), posizioneParola(), trovaParola() ">Trova parola</button>
+    <p id="pTrovata"></p>
+    <p id="nParola"></p> 
+    <p id="pPosizione"> </p>
+    
+     <button onclick="parolaMaiuscola()">Sostitusci parola in maiuscolo</button>
+     <p id="tMaiuscolo"></p>
+   
+     <button onclick="parolaMinuscola()">Ripristina testo</button>
+     <p id="tMinuscolo"></p>   
+
+      
+       
+   <script>
+    /*let text, parola;*/
+
+    function inserisciStringa(){
+        text=prompt("Inserisci testo",);
+        let t=text;
+        stampa(text);
+        return t;
+    }
+    function stampa(stampaTesto){
+         stampaStringa.innerHTML="Testo: <p class='t'>"+ stampaTesto + "<p>" ;
+    } 
+
+    function inserisciParola(){
+        parola=prompt("inserisci parola", );
+    }    
+
+    function aggiungiTesto(){
+        let testo=text;
+        let text2=inserisciStringa();
+        let text3=testo.concat(" ", text2);
+        text=text3;
+        stampa(text);
+    }
+    function trovaParola(){
+        let p=text.matchAll(parola);
+        occParola=Array.from(p);
+        pTrovata.innerHTML="Occorrenze parola: <scan class='t'>"+ occParola + "</scan>";
+        nParola.innerHTML="Num. parole: <scan class='t'>" + occParola.length + "</scan>";    
+        }
+
+    function posizioneParola (){
+        let prima=text.indexOf(parola);
+        let ultima=text.lastIndexOf(parola);
+         pPosizione.innerHTML= "Prima posizone: <scan class='t'>" + prima +  "</scan>, ultima posizone: <scan class='t'>" + ultima + "</scan>";
+    }
+
+    function lunghezzaStringa(){
+        lunghezza=text.length;
+        lStringa.innerHTML="Lunghezza stringa: <scan class='t'>" + lunghezza +  " caratteri</scan>";
+        } 
+
+    function parolaMaiuscola(){
+        let pMaiusola=parola.toUpperCase();
+        const text1=text.replaceAll(parola, pMaiusola);
+        tMaiuscolo.innerHTML="Testo con la parola <scan class='t' style='color: red'>" + parola + "</scan> in maiuscolo: <p class='t'>" + text1 + "</p";
+    }
+
+     function parolaMinuscola(){
+        let pMinuscola=parola.toLowerCase();
+        const text1=text.replaceAll(parola, pMinuscola);
+        tMinuscolo.innerHTML="Testo ripristinato: <p class='t'>" + text1 +  "</p>";
+    }
+    /*log.console();*/
+    </script>
+</body>
+</html>
