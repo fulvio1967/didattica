@@ -1,0 +1,38 @@
+<h1>Inserimento dati</h1>
+  
+    <button onclick="NuoviDati()">Inserimento dati</button>
+    
+    <table>
+        <tr><td class="campi"><i>Nome: </i></td></td><td class="valori" id="nome"></td></tr>
+        <tr></tr><td class="campi"><i>Cognome: </i></td><td class="valori" id="cognome"></td></tr>
+        <tr></tr> <td class="campi"><i>Telefono: </i></td><td class="valori" id="telefono"></td></tr>
+        <tr></tr> <td class="campi"><i>Indirizzo: </i></td><td class="valori" id="indirizzo"></td></tr>
+
+    </table>
+    <p></p>
+    <button onclick="stampaDati()">Stampa dati</button>
+    <script>
+        let dati;
+        function nuovoUtente(nome, cognome, indirizzo, telefono){
+            return {
+            nome, 
+            cognome, 
+            indirizzo, 
+            telefono
+        }
+    }
+        function NuoviDati(){
+            const dati=nuovoUtente(
+            prompt("Nome: ", ""), 
+            prompt("Cognome: ", ""), 
+            prompt("Indirizzo:",""), 
+            prompt("Telefono: ", "")
+            );
+            
+        }
+        function stampaDati(){
+            nome.innerHTML= dati.nome;
+            cognome.innerHTML= dati.cognome;
+            indirizzo.innerHTML= dati.indirizzo;
+            telefono.innerHTML= dati.telefono;
+        };
