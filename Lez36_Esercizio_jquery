@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documenti</title>
+  <!-- jQuery Mobile CSS e tema -->
+  <link id="theme" rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+
+  <!-- jQuery e jQuery Mobile JS -->
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Stili personalizzati -->
+
+  <style>
+    div#col{
+       text-align: center;
+       font-size: 15pt;
+    }
+
+    .A{
+      background-color: aqua;
+    }
+    .B{
+      background-color: rgb(195, 0, 255);
+    }
+    .C{
+      background-color: rgb(255, 238, 0);
+    }
+     .D{
+      background-color: rgb(4, 0, 255);
+    }
+    .E{
+      background-color: rgb(255, 17, 0);
+    }
+    .F{
+      background-color: rgb(255, 123, 0);
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Pagina jQuery Mobile -->
+
+  <div data-role="page" id="mainPage">
+ <!-- Intestazione -->
+    <div data-role="header">
+      <h1>Impaginazione jQuery Mobile</h1>
+    </div>
+    <!-- Contenuto principale -->
+
+    <div data-role="main" class="ui-content">
+      <!-- Griglia singola (vuota per ora) -->
+      <div class="ui-grid-solo">
+     </div>
+     
+      <div class="ui-grid-b">
+      <div class="ui-block-a ">
+        <button onclick="TemaScuro()">Tema Scuro</button>
+      </div>
+      <div class="ui-block-b ">
+        <button onclick="TemaChiaro()">Tema Chiaro</button>
+      </div>
+       <div class="ui-block-c ">
+       <button onclick="numCol()">numero di colonne</button>
+      </div>
+      </div>
+           
+      <div id="col">
+      <div class="ui-block-a A"> 1 </div>
+      <div class="ui-block-b B"> 2</div>
+      <div class="ui-block-c C"> 3</div>
+      <div class="ui-block-d D"> 4 </div>   
+      <div class="ui-block-e E"> 5 </div>    
+      </div>
+    </div>
+
+    <!-- Piè di pagina -->
+    <div data-role="footer">
+      <h4>footer</h4>
+    </div>
+  </div>
+  <!-- Script per cambiare tema -->
+  <script>
+    function TemaScuro() {
+      document.getElementById("theme").href = "https://demos.jquerymobile.com/1.4.5/theme-classic/theme-classic.css";
+    }
+    function TemaChiaro() {
+      document.getElementById("theme").href = "https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css";
+    }
+  function numCol() {
+    let colonne = prompt("Inserisci lettera num. colonna", "");
+    document.getElementById("col").setAttribute("class", "ui-grid-" + colonne);
+}
+  </script>
+</body>
+
+</html>
+
