@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo reddito x bonus elettrodomestici</title>
+    <style>
+        .formDati{
+            
+            width: 400px;
+           
+            background-color: rgb(163, 164, 165);
+            color: black;
+            border: 1px solid rgb(107, 107, 107);
+            border-radius: 10px;
+            text-align: left;
+            color: rgb(37, 37, 37);
+        }
+        .button {
+            width: 120px;
+            height: 30px;
+            background-color: rgb(0, 110, 255);
+            color: white;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        .button:hover  {
+            background-color: rgb(2, 57, 129);
+        }
+        input.testo{
+            width: 100px;
+        }
+        input.numero{
+            width: 30px;
+        }
+        legend{ 
+            height: 40px;
+            background-color: rgb(3, 79, 165);
+            color:rgb(200, 200, 201);
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        fieldset{
+            margin: 0 10px 10px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="formDati">
+    <fieldset><legend>Calcolo condizione per accedere al bonus elettrodomestici</legend>
+    <form action="calcoloBonus.php" method="post">
+
+       <label>Ristrutturazione in corso </label>
+        <select  name="ristrutturazione"  required class="testo">
+            <option value="0">NO</option>
+            <option value="1">SI</option>
+         </select>   
+         <br><br>
+
+        <label>Elettrodomestici efficienti: </label>
+        <select  name="efficienza"  required class="testo">
+            <option value="-3" style=" background-color: rgb(209, 3, 3)">D</option>
+            <option value="-2" style=" background-color: rgb(255, 81, 0)">C</option>
+            <option value="-1" style=" background-color: rgb(255, 166, 0)">B</option>
+            <option value="0" style=" background-color: rgb(238, 255, 0)">A</option>
+            <option value="1" style=" background-color: rgb(9, 255, 0)">A+</option>
+            <option value="2" style=" background-color: rgb(8, 207, 1)">A++</option>
+            <option value="3" style=" background-color: rgb(6, 158, 0)">A+++</option>
+            <br><br>
+            </select>
+            <br><br>
+       <label>Residente in Italia </label>
+       <select  name="residenza"  required class="testo">
+            <option value="0">NO</option>
+            <option value="1">SI</option>
+         </select>
+           <br><br>
+        <label>Inserisci valore ISEE: </label>
+        <input type="number" name="reddito" required class="testo"><br><br>
+        <input type="submit" class="button" value="Calcola e verifica">
+    </form>
+    </fieldset>
+    </div>
+</body>
+</html>
